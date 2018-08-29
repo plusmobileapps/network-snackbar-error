@@ -16,8 +16,7 @@ NetworkSnackbarHelper(
                 snackbarContainer = coordinator,
                 lifecycleOwner = this)
 ```
-
-![Demo](https://github.com/plusmobileapps/network-snackbar-error/blob/master/screen-record-201808-29T02:48:48Z.mp4.gif)
+![Demo](https://github.com/plusmobileapps/network-snackbar-error/blob/master/network-snackbar.gif)
 
 Typically will instantiate this helper class in a `Fragment` or `Activity` to pass it the `Context` and `LifecycleOwner`. Then also pass a reference to the `View` in which to display the reactive snackbar onto. 
 
@@ -33,6 +32,8 @@ If you would like to get a callback of when the network changes, the last parame
             Toast.makeText(this, "Network state is $isConnected", Toast.LENGTH_LONG).show()
         }
 ```
+
+![Demo](https://github.com/plusmobileapps/network-snackbar-error/blob/master/screen-record-201808-29T02:48:48Z.mp4.gif)
 
 If you would like a little bit more functionality, you may also pass in snackbar duration or message to be displayed too. These are default parameters which will default to `Snackbar.LENGTH_INDEFINITE` and a string resource id for "No Network Connection" 
 
