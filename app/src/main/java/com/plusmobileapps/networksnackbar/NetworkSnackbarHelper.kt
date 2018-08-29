@@ -25,6 +25,8 @@ import com.plusmobileapps.networksnackbar.NetworkChangeBroadcastReceiver.Compani
  *                       unregister the network change broadcast receiver
  * @param stringId the string resource id for the snackbar message of no network
  * @param duration duration for the snackbar
+ * @param callback callback method for activity to delegate network changes back to presenter if other
+ *                 behavior is desired past the snackbar
  */
 class NetworkSnackbarHelper(private val context: Context,
                             private val snackbarContainer: View,
