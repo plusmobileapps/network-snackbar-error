@@ -61,12 +61,6 @@ class NetworkSnackbarHelper(private val context: Context,
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    fun disconnectListener() {
-        try {
-            context.unregisterReceiver(networkChangeReceiver)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
+    fun disconnectListener() = context.unregisterReceiver(networkChangeReceiver)
 
 }

@@ -131,11 +131,5 @@ The last part is take advantage of the fact that this class is observing a lifec
                    
 ```kotlin
     @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
-    fun disconnectListener() {
-        try {
-            context.unregisterReceiver(networkChangeReceiver)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
+    fun disconnectListener() = context.unregisterReceiver(networkChangeReceiver)
 ```
